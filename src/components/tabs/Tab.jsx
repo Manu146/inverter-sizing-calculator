@@ -19,7 +19,7 @@ export default function Tab({ children, index, disabled = false }) {
 export const TabsContainer = ({ children }) => {
   return (
     <div>
-      <nav className="flex gap-4 p-3 rounded-lg bg-zinc-800">{children}</nav>
+      <nav className="flex gap-4 p-2 rounded-lg bg-zinc-800">{children}</nav>
     </div>
   );
 };

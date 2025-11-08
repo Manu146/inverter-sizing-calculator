@@ -4,7 +4,11 @@ import Tab from "./components/tabs/Tab";
 import { TabsContainer } from "./components/tabs/Tab";
 import TabPanel from "./components/tabs/TabPanel";
 
-const tabs = ["hola1", "hola2", "hola3"];
+const tabs = [
+  { title: "Tab 1", component: "COMPONENT 1" },
+  { title: "Tab 2", component: "COMPONENT 2" },
+  { title: "Tab 3", component: "COMPONENT 3" },
+];
 
 function App() {
   return (
@@ -13,14 +17,14 @@ function App() {
         <TabsContainer>
           {tabs.map((tab, index) => (
             <Tab key={index} index={index}>
-              {tab}asd
+              {tab.title}
             </Tab>
           ))}
         </TabsContainer>
         <div>
           {tabs.map((tab, index) => (
             <TabPanel key={index} index={index}>
-              {tab}
+              {tab.component}
             </TabPanel>
           ))}
         </div>
