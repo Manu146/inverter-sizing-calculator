@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Select from "../select/Select";
 import { Plus, Zap, Lightbulb } from "lucide-react";
 import appliancesData from "../../assets/data.json";
+import { LoadsContext } from "../../contexts/LoadsContext"; // added import
 
 export default function LoadsTab() {
   const [appliance, setAppliance] = useState({
@@ -11,7 +12,8 @@ export default function LoadsTab() {
     hours: "",
     qty: "",
   });
-  const [loads, setLoads] = useState([]);
+  const { loads, totalPower, totalDailyKwh, addLoad } =
+    useContext(LoadsContext); // use context
   const { id, type, size, hours, qty } = appliance;
   const dataReady = id && type && size && hours;
 
@@ -49,15 +51,7 @@ export default function LoadsTab() {
   const currentTotalWatts = currentWattsPerUnit * currentQtyNum;
   const currentDailyKwh = (currentTotalWatts * currentHoursNum) / 1000;
 
-  // totals from added loads
-  const totalPower = loads.reduce(
-    (sum, l) => sum + (Number(l.totalWatts) || 0),
-    0
-  );
-  const totalDailyKwh = loads.reduce(
-    (sum, l) => sum + (Number(l.dailyKwh) || 0),
-    0
-  );
+  // totals are now provided by context
 
   // --- handler to add current appliance to the loads list ---
   function handleAddAppliance() {
@@ -86,7 +80,7 @@ export default function LoadsTab() {
       dailyKwh,
     };
 
-    setLoads((prev) => [...prev, newLoad]);
+    addLoad(newLoad); // use context addLoad
     // reset form
     setAppliance({ id: "", type: "", size: "", hours: "", qty: "" });
   }

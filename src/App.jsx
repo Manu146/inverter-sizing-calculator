@@ -1,5 +1,6 @@
 import "./App.css";
 import { TabProvider } from "./contexts/TabContext";
+import { LoadsProvider } from "./contexts/LoadsContext";
 import Tab from "./components/tabs/Tab";
 import { TabsContainer } from "./components/tabs/Tab";
 import TabPanel from "./components/tabs/TabPanel";
@@ -15,20 +16,22 @@ function App() {
   return (
     <div className="container mx-auto">
       <TabProvider>
-        <TabsContainer>
-          {tabs.map((tab, index) => (
-            <Tab key={index} index={index}>
-              {tab.title}
-            </Tab>
-          ))}
-        </TabsContainer>
-        <div className="">
-          {tabs.map((tab, index) => (
-            <TabPanel key={index} index={index}>
-              <tab.component key={index} />
-            </TabPanel>
-          ))}
-        </div>
+        <LoadsProvider>
+          <TabsContainer>
+            {tabs.map((tab, index) => (
+              <Tab key={index} index={index}>
+                {tab.title}
+              </Tab>
+            ))}
+          </TabsContainer>
+          <div className="">
+            {tabs.map((tab, index) => (
+              <TabPanel key={index} index={index}>
+                <tab.component key={index} />
+              </TabPanel>
+            ))}
+          </div>
+        </LoadsProvider>
       </TabProvider>
     </div>
   );
