@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import Select from "../select/Select";
-import { Plus, Zap, Lightbulb } from "lucide-react";
+import { Plus, Zap, Lightbulb, Trash2 } from "lucide-react";
 import appliancesData from "../../assets/data.json";
 import { LoadsContext } from "../../contexts/LoadsContext"; // added import
 
@@ -199,7 +199,7 @@ export default function LoadsTab() {
         </button>
       </div>
       <div className="col-span-2 grid grid-cols-2 gap-4">
-        <div className="bg-coal-900 rounded-xl p-6 border border-coal-800 hover:border-green-500 flex justify-between ease-in duration-150">
+        <div className="bg-coal-900 rounded-xl p-6 border border-coal-800 hover:border-green-500 flex justify-between transition-colors ease-in duration-150">
           <div className="flex flex-col">
             <p className="text-zinc-400 text-sm font-medium">Potencia total:</p>
             <p className="text-2xl text-zinc-100 font-bold">{totalPower} W</p>
@@ -208,7 +208,7 @@ export default function LoadsTab() {
             <Zap />
           </div>
         </div>
-        <div className="bg-coal-900 rounded-xl p-6 border border-coal-800 hover:border-green-500 flex justify-between ease-in duration-150">
+        <div className="bg-coal-900 rounded-xl p-6 border border-coal-800 hover:border-green-500 flex justify-between transition-colors ease-in duration-150">
           <div className="flex flex-col">
             <p className="text-zinc-400 text-sm font-medium">Consumo diario:</p>
             <p className="text-2xl text-zinc-100 font-bold">
@@ -248,13 +248,18 @@ export default function LoadsTab() {
                         {l.typeName} • {l.sizeName}
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="font-medium text-green-400">
-                        {l.totalWatts} W
+                    <div className="flex gap-6">
+                      <div className="text-right">
+                        <div className="font-medium text-green-400">
+                          {l.totalWatts} W
+                        </div>
+                        <div className="text-sm text-zinc-400">
+                          {l.dailyKwh.toFixed(2)} kWh/d
+                        </div>
                       </div>
-                      <div className="text-sm text-zinc-400">
-                        {l.dailyKwh.toFixed(2)} kWh/d
-                      </div>
+                      <button className="bg-red-700/10 text-red-700 rounded-lg p-3 hover:bg-red-700/30 transition-colors ease-in duration-100">
+                        <Trash2 />
+                      </button>
                     </div>
                   </div>
                 </li>
