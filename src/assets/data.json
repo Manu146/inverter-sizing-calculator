@@ -1,0 +1,390 @@
+[
+  {
+    "id": "app_001",
+    "name": "Air Conditioner",
+    "icon": "ac_unit",
+    "types": [
+      {
+        "id": "type_001",
+        "name": "Conventional",
+        "sizes": [
+          {
+            "id": "size_001",
+            "name": "9,000 BTU",
+            "watts": 1000,
+            "peakWatts": 2500
+          },
+          {
+            "id": "size_002",
+            "name": "12,000 BTU",
+            "watts": 1500,
+            "peakWatts": 3500
+          },
+          {
+            "id": "size_003",
+            "name": "18,000 BTU",
+            "watts": 2000,
+            "peakWatts": 4500
+          }
+        ]
+      },
+      {
+        "id": "type_002",
+        "name": "Inverter",
+        "sizes": [
+          {
+            "id": "size_004",
+            "name": "12,000 BTU",
+            "watts": 900,
+            "peakWatts": 1800
+          },
+          {
+            "id": "size_005",
+            "name": "18,000 BTU",
+            "watts": 1400,
+            "peakWatts": 2800
+          },
+          {
+            "id": "size_006",
+            "name": "24,000 BTU",
+            "watts": 1900,
+            "peakWatts": 3800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "app_002",
+    "name": "Refrigerator",
+    "icon": "kitchen",
+    "types": [
+      {
+        "id": "type_003",
+        "name": "Conventional (Frost)",
+        "sizes": [
+          {
+            "id": "size_007",
+            "name": "Small (<= 10 cu. ft.)",
+            "watts": 150,
+            "peakWatts": 450
+          },
+          {
+            "id": "size_008",
+            "name": "Medium (11-18 cu. ft.)",
+            "watts": 200,
+            "peakWatts": 600
+          },
+          {
+            "id": "size_009",
+            "name": "Large (> 18 cu. ft.)",
+            "watts": 250,
+            "peakWatts": 750
+          }
+        ]
+      },
+      {
+        "id": "type_004",
+        "name": "Inverter (No-Frost)",
+        "sizes": [
+          {
+            "id": "size_010",
+            "name": "Small (<= 10 cu. ft.)",
+            "watts": 100,
+            "peakWatts": 300
+          },
+          {
+            "id": "size_011",
+            "name": "Medium (11-18 cu. ft.)",
+            "watts": 130,
+            "peakWatts": 390
+          },
+          {
+            "id": "size_012",
+            "name": "Large (> 18 cu. ft.)",
+            "watts": 180,
+            "peakWatts": 540
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "app_003",
+    "name": "Fan",
+    "icon": "mode_fan",
+    "types": [
+      {
+        "id": "type_005",
+        "name": "Ceiling Fan",
+        "sizes": [
+          { "id": "size_013", "name": "Small", "watts": 30, "peakWatts": 70 },
+          { "id": "size_014", "name": "Medium", "watts": 50, "peakWatts": 100 },
+          { "id": "size_015", "name": "Large", "watts": 75, "peakWatts": 150 }
+        ]
+      },
+      {
+        "id": "type_006",
+        "name": "Pedestal / Floor Fan",
+        "sizes": [
+          {
+            "id": "size_016",
+            "name": "Standard",
+            "watts": 60,
+            "peakWatts": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "app_004",
+    "name": "Microwave",
+    "icon": "microwave",
+    "types": [
+      {
+        "id": "type_007",
+        "name": "Standard",
+        "sizes": [
+          {
+            "id": "size_017",
+            "name": "Default",
+            "watts": 1100,
+            "peakWatts": 1800
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "app_005",
+    "name": "Light Bulb",
+    "icon": "lightbulb",
+    "types": [
+      {
+        "id": "type_008",
+        "name": "Incandescent",
+        "sizes": [
+          { "id": "size_018", "name": "40W", "watts": 40 },
+          { "id": "size_019", "name": "60W", "watts": 60 },
+          { "id": "size_020", "name": "100W", "watts": 100 }
+        ]
+      },
+      {
+        "id": "type_009",
+        "name": "CFL",
+        "sizes": [
+          { "id": "size_021", "name": "40W Equivalent", "watts": 10 },
+          { "id": "size_022", "name": "60W Equivalent", "watts": 15 },
+          { "id": "size_023", "name": "100W Equivalent", "watts": 25 }
+        ]
+      },
+      {
+        "id": "type_010",
+        "name": "LED",
+        "sizes": [
+          { "id": "size_024", "name": "40W Equivalent", "watts": 6 },
+          { "id": "size_025", "name": "60W Equivalent", "watts": 9 },
+          { "id": "size_026", "name": "100W Equivalent", "watts": 14 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "app_006",
+    "name": "Computer",
+    "icon": "computer",
+    "types": [
+      {
+        "id": "type_011",
+        "name": "Desktop",
+        "sizes": [
+          {
+            "id": "size_027",
+            "name": "Standard Office",
+            "watts": 150,
+            "peakWatts": 300
+          },
+          {
+            "id": "size_028",
+            "name": "Gaming / Workstation",
+            "watts": 450,
+            "peakWatts": 800
+          }
+        ]
+      },
+      {
+        "id": "type_012",
+        "name": "All-in-One",
+        "sizes": [
+          {
+            "id": "size_029",
+            "name": "Standard",
+            "watts": 120,
+            "peakWatts": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "app_007",
+    "name": "Laptop",
+    "icon": "laptop",
+    "types": [
+      {
+        "id": "type_013",
+        "name": "Standard / Ultrabook",
+        "sizes": [{ "id": "size_030", "name": "Default", "watts": 65 }]
+      },
+      {
+        "id": "type_014",
+        "name": "Gaming / Workstation",
+        "sizes": [{ "id": "size_031", "name": "Default", "watts": 230 }]
+      }
+    ]
+  },
+  {
+    "id": "app_008",
+    "name": "Television (TV)",
+    "icon": "tv",
+    "types": [
+      {
+        "id": "type_015",
+        "name": "LED",
+        "sizes": [
+          { "id": "size_032", "name": "Small (<40 in)", "watts": 50 },
+          { "id": "size_033", "name": "Medium (40-55 in)", "watts": 80 },
+          { "id": "size_034", "name": "Large (56-70 in)", "watts": 120 },
+          { "id": "size_035", "name": "Extra Large (>70 in)", "watts": 180 }
+        ]
+      },
+      {
+        "id": "type_016",
+        "name": "OLED / QLED",
+        "sizes": [
+          { "id": "size_036", "name": "Medium (40-55 in)", "watts": 110 },
+          { "id": "size_037", "name": "Large (56-70 in)", "watts": 150 },
+          { "id": "size_038", "name": "Extra Large (>70 in)", "watts": 220 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "app_009",
+    "name": "Washing Machine",
+    "icon": "local_laundry_service",
+    "types": [
+      {
+        "id": "type_017",
+        "name": "Top-Load",
+        "sizes": [
+          {
+            "id": "size_039",
+            "name": "Standard",
+            "watts": 400,
+            "peakWatts": 1200
+          }
+        ]
+      },
+      {
+        "id": "type_018",
+        "name": "Front-Load (HE)",
+        "sizes": [
+          {
+            "id": "size_040",
+            "name": "Standard",
+            "watts": 250,
+            "peakWatts": 800
+          }
+        ]
+      },
+      {
+        "id": "type_019",
+        "name": "Front-Load (w/ Heater)",
+        "sizes": [
+          {
+            "id": "size_041",
+            "name": "Standard",
+            "watts": 1400,
+            "peakWatts": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "app_010",
+    "name": "Water Cooler / Dispenser",
+    "icon": "water_drop",
+    "types": [
+      {
+        "id": "type_020",
+        "name": "Cold Only",
+        "sizes": [
+          {
+            "id": "size_042",
+            "name": "Default",
+            "watts": 100,
+            "peakWatts": 300
+          }
+        ]
+      },
+      {
+        "id": "type_021",
+        "name": "Hot & Cold",
+        "sizes": [
+          {
+            "id": "size_043",
+            "name": "Default",
+            "watts": 600,
+            "peakWatts": 900
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "app_011",
+    "name": "Coffee Machine",
+    "icon": "coffee_maker",
+    "types": [
+      {
+        "id": "type_022",
+        "name": "Drip",
+        "sizes": [
+          {
+            "id": "size_044",
+            "name": "Default",
+            "watts": 800,
+            "peakWatts": 900
+          }
+        ]
+      },
+      {
+        "id": "type_023",
+        "name": "Single-Serve (Pod)",
+        "sizes": [
+          {
+            "id": "size_045",
+            "name": "Default",
+            "watts": 1200,
+            "peakWatts": 1300
+          }
+        ]
+      },
+      {
+        "id": "type_024",
+        "name": "Espresso",
+        "sizes": [
+          {
+            "id": "size_046",
+            "name": "Default",
+            "watts": 1400,
+            "peakWatts": 1500
+          }
+        ]
+      }
+    ]
+  }
+]
