@@ -12,7 +12,7 @@ export default function LoadsTab() {
     hours: "",
     qty: "",
   });
-  const { loads, totalPower, totalDailyKwh, addLoad } =
+  const { loads, totalPower, totalDailyKwh, addLoad, removeLoad } =
     useContext(LoadsContext); // use context
   const { id, type, size, hours, qty } = appliance;
   const dataReady = id && type && size && hours;
@@ -83,6 +83,10 @@ export default function LoadsTab() {
     addLoad(newLoad); // use context addLoad
     // reset form
     setAppliance({ id: "", type: "", size: "", hours: "", qty: "" });
+  }
+
+  function handleRemoveAppliance(uid) {
+    removeLoad(uid);
   }
   // ------------------------------------------------------------------
 
@@ -257,7 +261,10 @@ export default function LoadsTab() {
                           {l.dailyKwh.toFixed(2)} kWh/d
                         </div>
                       </div>
-                      <button className="bg-red-700/10 text-red-700 rounded-lg p-3 hover:bg-red-700/30 transition-colors ease-in duration-100">
+                      <button
+                        onClick={() => handleRemoveAppliance(l.uid)}
+                        className="bg-red-700/10 text-red-700 rounded-lg p-3 hover:bg-red-700/30 transition-colors ease-in duration-100"
+                      >
                         <Trash2 />
                       </button>
                     </div>
